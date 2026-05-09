@@ -1,0 +1,14 @@
+:root {
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+    --spacing-xxl: 16rem;
+}
+
+
+body, button, input, textarea, p, span {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", Helvetica, sans-serif;
+}

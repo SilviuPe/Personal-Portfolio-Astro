@@ -1,5 +1,8 @@
 ---
+import "../styles/global.css";
+import Header from '../components/Header.astro';
 
+const { title = "Silvyu Dev" } = Astro.props;
 ---
 
 <html lang="en">
@@ -9,9 +12,9 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{title}</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Header page="Home"/>
 	</body>
 </html>

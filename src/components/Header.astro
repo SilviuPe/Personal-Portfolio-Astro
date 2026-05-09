@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import LogoImage from '../assets/Logo.svg';
+import "../styles/header.css";
+const {page} = Astro.props;
+---
+
+<div class="header-container">
+    <div class="logo-container">
+        <Image
+                src={LogoImage}
+                alt="Silvyu Coding"
+                width={94}
+                loading="eager"
+        />
+    </div>
+    <div class="navigation-bar-container">
+        <a href="/" class={page === 'Home' ? 'active' : ''}>Home</a>
+        <a href="/portfolio" class={page === 'Portfolio' ? 'active' : ''}>Portfolio</a>
+        <a href="/about" class={page === 'About' ? 'active' : ''}>About</a>
+    </div>
+    <div class="cta-button-container">
+        <button>Contact me</button>
+    </div>
+</div>

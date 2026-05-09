@@ -1,0 +1,60 @@
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: var(--spacing-md);
+
+    position: fixed;
+
+    top: 0;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-bar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border: 1px solid #000;
+    border-radius: var(--spacing-md);
+
+    padding: calc(var(--spacing-sm)/2) var(--spacing-md);
+    gap: var(--spacing-lg);
+
+}
+.navigation-bar-container a {
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    text-decoration: none;
+}
+.navigation-bar-container a.active {
+    color: #000;
+}
+.navigation-bar-container a:hover {
+    color: #000;
+}
+
+.cta-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-button-container button {
+    border: none;
+    background: #000;
+    color: #fff;
+    padding: calc(var(--spacing-sm) * 0.8) var(--spacing-md);
+    border-radius: var(--spacing-md);
+    font-size: 1em;
+}
