@@ -1,0 +1,44 @@
+---
+import "../../../styles/global.css";
+import Footer from '../../../components/Footer.jsx';
+import Header from '../../../components/Header.jsx';
+import ProjectsList from '../../../components/ProjectsList';
+
+import ProjectPreview from '../../../components/ProjectPreview';
+import Gallery1 from './gallery/1.png';
+import Gallery2 from './gallery/2.png';
+import Gallery3 from './gallery/3.png';
+
+
+
+const { title = "Silvyu Dev" } = Astro.props;
+const description = "Business Search is a free platform designed for freelancers and small companies that want to find new clients more efficiently. The system uses OpenStreetMap data to identify businesses and collect their contact details and social media information, returning everything in a structured format.\n" +
+"\n" +
+"The goal is to eliminate the time consuming process of manually searching through Google Maps or relying on expensive subscription based tools. You can deploy the platform in your own environment and immediately start searching for potential clients worldwide, with full control over your data and workflow."
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/faviconme.png" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <Header page="" client:load />
+        <div style="padding-bottom: var(--spacing-xl)"></div>
+        <ProjectPreview year="2026" title="Business Search" description={description} images={[Gallery1, Gallery2, Gallery3]} client:load/>
+        <ProjectsList exceptProject={1} customTitle={"Other Projects"} client:load/>
+        <Footer page="" client:load/>
+        <script is:inline>
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
+
+            window.addEventListener("load", () => {
+                window.scrollTo(0, 0);
+            });
+        </script>
+    </body>
+</html>

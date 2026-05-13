@@ -26,10 +26,56 @@ export default function ServicesQuality() {
             }}
             className="services-quality-container">
             <div className="services-quality-text-container">
-                <h2>Why my services?</h2>
-                <span>I do not just deliver code. I deliver sustainable solutions for your business.</span>
+                <motion.h2
+                initial={{
+                opacity: 0,
+                y: 80
+            }}
+            whileInView={{
+                opacity: 1,
+                y: 0
+            }}
+            transition={{
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1]
+            }}
+            viewport={{
+                once: false,
+            }}>Why my services?</motion.h2>
+                <motion.span
+                initial={{
+                opacity: 0,
+                y: 80
+            }}
+            whileInView={{
+                opacity: 1,
+                y: 0
+            }}
+            transition={{
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1]
+            }}
+            viewport={{
+                once: false,
+            }}>I do not just deliver code. I deliver sustainable solutions for your business.</motion.span>
             </div>
-            <div className="services-quality-presentation">
+            <motion.div
+                initial={{
+                    opacity: 0,
+                    y: 80
+                }}
+                whileInView={{
+                    opacity: 1,
+                    y: 0
+                }}
+                transition={{
+                    duration: 0.8,
+                    ease: [0.22, 1, 0.36, 1]
+                }}
+                viewport={{
+                    once: false,
+                }}
+                className="services-quality-presentation">
                 <div className="services-quality-wrapper">
                     <div className="service-section center">
                         <div className="service-section-box center">
@@ -93,7 +139,7 @@ export default function ServicesQuality() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </motion.div>
     )
 }

@@ -1,9 +1,8 @@
 ---
 import "../styles/global.css";
 import Header from '../components/Header.jsx';
-import Footer from '../components/Footer';
-import ProjectsList from '../components/ProjectsList.jsx';
-
+import Footer from '../components/Footer.jsx';
+import ContactComponent from '../components/Contact';
 const { title = "Silvyu Dev" } = Astro.props;
 ---
 
@@ -16,9 +15,10 @@ const { title = "Silvyu Dev" } = Astro.props;
         <title>{title}</title>
     </head>
     <body>
-        <Header page="Portfolio" client:load />
-        <ProjectsList exceptProject={undefined} customTitle="Some of My Projects" client:load/>
-        <Footer page="Portfolio" client:load/>
+        <Header page="Contact" client:load />
+        <div style="padding-bottom: var(--spacing-xl)"></div>
+        <ContactComponent client:load/>
+        <Footer page="Contact" client:load/>
         <script is:inline>
             if ("scrollRestoration" in history) {
                 history.scrollRestoration = "manual";

@@ -1,0 +1,126 @@
+.project-preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    gap: var(--spacing-lg);
+}
+
+.project-preview-data-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    width: 70%;
+    gap: var(--spacing-md);
+    background-color: #FFFFFF;
+
+    padding: var(--spacing-md);
+    border-radius: var(--spacing-md);
+}
+
+.project-preview-data-header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.project-preview-data-header-container button {
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--spacing-sm) * 0.5);
+    align-items: center;
+    border: none;
+    background: none;
+    font-size: 1em;
+}
+
+.project-preview-data-header-container button a {
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--spacing-sm) * 0.5);
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+}
+
+.project-preview-data-header-container button a:hover {
+    color: rgba(0,0,0,0.5);
+    transition: 0.25s;
+}
+
+.project-preview-year-container p {
+    font-size: 1.25em;
+    font-weight: normal;
+    color: rgba(0,0,0,0.5);
+    margin: 0;
+}
+
+.project-preview-title-container h2 {
+    margin: 0;
+    font-size: 1.875em;
+    font-weight: normal;
+}
+
+.project-preview-description-container p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: normal;
+    color: rgba(0,0,0,0.5);
+    line-height: 1.5;
+    /*font-style: italic;*/
+}
+.project-preview-gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+
+    gap: var(--spacing-lg);
+}
+
+.project-preview-gallery-first-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.project-preview-gallery-first-image img {
+    width: 100%;
+    border-radius: var(--spacing-md);
+}
+
+.project-preview-gallery-row-images {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-md);
+    align-items: center;
+    width: 100%;
+}
+
+.project-preview-gallery-row-images img {
+    width: 50%;
+    border-radius: var(--spacing-sm);
+}
+
+
+@media screen and (max-width: 1324px) {
+    .project-preview-gallery-container {
+        gap: var(--spacing-md);
+    }
+    .project-preview-gallery-first-image img {
+        border-radius: var(--spacing-sm);
+    }
+    .project-preview-gallery-row-images {
+        flex-direction: column;
+    }
+    .project-preview-gallery-row-images img {
+        width: 100%;
+    }
+}

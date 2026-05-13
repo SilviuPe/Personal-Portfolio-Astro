@@ -1,0 +1,46 @@
+---
+import "../../../styles/global.css";
+import Footer from '../../../components/Footer.jsx';
+import Header from '../../../components/Header.jsx';
+import ProjectsList from '../../../components/ProjectsList';
+
+import ProjectPreview from '../../../components/ProjectPreview';
+import Gallery1 from './gallery/1.png';
+import Gallery2 from './gallery/2.png';
+import Gallery3 from './gallery/3.png';
+
+const { title = "Silvyu Dev" } = Astro.props;
+const description = "IMS Products Platform is a comprehensive stock management and business analytics system built to simplify inventory operations and improve operational visibility across the entire supply chain. The platform enables companies to efficiently manage products, warehouses, suppliers, stock transfers, and order tracking from a centralized environment.\n" +
+    "\n" +
+    "With real-time inventory monitoring, IMS Products Platform helps businesses maintain accurate stock levels, prevent shortages or overstock situations, and optimize product availability. The system supports product categorization, barcode management, stock alerts, batch tracking, and transaction history, ensuring full control over inventory movement and accountability.\n" +
+    "\n" +
+    "In addition to stock management, the platform delivers advanced statistics and reporting tools that transform operational data into actionable insights. Users can access detailed dashboards, sales trends, stock performance reports, inventory turnover analysis, and custom-generated statistics to support strategic planning and business growth.\n" +
+    "\n" +
+    "Designed with scalability and usability in mind, IMS Products Platform is suitable for warehouses, retail businesses, distributors, and manufacturing environments. Its intuitive interface and automated workflows improve efficiency, reduce administrative workload, and enable faster, data-driven decision making across the organization."
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/faviconme.png" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <Header page="" client:load />
+        <div style="padding-bottom: var(--spacing-xl)"></div>
+        <ProjectPreview year="2024" title="IMS Products Platform" description={description} images={[Gallery1, Gallery2, Gallery3]} client:load/>
+        <ProjectsList exceptProject={2} customTitle={"Other Projects"} client:load/>
+        <Footer page="" client:load/>
+        <script is:inline>
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
+
+            window.addEventListener("load", () => {
+                window.scrollTo(0, 0);
+            });
+        </script>
+    </body>
+</html>

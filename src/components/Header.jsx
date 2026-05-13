@@ -57,10 +57,16 @@ export default function Header({ page }) {
                 >
                     About
                 </a>
+                <a
+                    href="/contact"
+                    className={page === "Contact" ? "active" : ""}
+                >
+                    Contact
+                </a>
             </div>
 
             <div className="cta-button-container">
-                <button className="cta-button">
+                <button className="cta-button" onClick={()=> {document.location.href = "/contact"}}>
                     Contact me
                 </button>
             </div>

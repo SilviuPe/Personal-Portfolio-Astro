@@ -1,0 +1,46 @@
+---
+import "../../../styles/global.css";
+import Footer from '../../../components/Footer.jsx';
+import Header from '../../../components/Header.jsx';
+import ProjectsList from '../../../components/ProjectsList';
+
+import ProjectPreview from '../../../components/ProjectPreview';
+import Gallery1 from './gallery/1.png';
+import Gallery2 from './gallery/2.png';
+import Gallery3 from './gallery/3.png';
+
+const { title = "Silvyu Dev" } = Astro.props;
+const description = "CallAPI is a lightweight API development and testing platform designed for developers who need a fast and organized way to interact with APIs and web services. The platform allows users to send HTTP requests to APIs, websites, and external services through a clean and minimal interface built for productivity.\n" +
+    "\n" +
+    "The project was created to provide a controlled environment for testing application endpoints, inspecting responses, and managing API workflows without unnecessary complexity. Developers can configure request methods, headers, body data, and variables while previewing responses in real time.\n" +
+    "\n" +
+    "One of the core features of CallAPI is its collection management system, which enables users to store, organize, and reuse API endpoints efficiently. This makes it easier to manage large groups of requests during development, debugging, or integration testing.\n" +
+    "\n" +
+    "The platform focuses on simplicity, usability, and developer experience, combining a modern UI with practical tooling for everyday API workflows. CallAPI is suitable for testing backend services, validating endpoints, debugging integrations, and organizing API data during application development."
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/faviconme.png" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <Header page="" client:load />
+        <div style="padding-bottom: var(--spacing-xl)"></div>
+        <ProjectPreview year="2025" title="Call API" description={description} images={[Gallery1, Gallery2, Gallery3]} client:load/>
+        <ProjectsList exceptProject={0} customTitle={"Other Projects"} client:load/>
+        <Footer page="" client:load/>
+        <script is:inline>
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
+
+            window.addEventListener("load", () => {
+                window.scrollTo(0, 0);
+            });
+        </script>
+    </body>
+</html>

@@ -5,14 +5,18 @@ import "../styles/home.css";
 import Header from '../components/Header.jsx';
 import Hero from '../components/Hero.jsx';
 import Reviews from '../components/Reviews.jsx';
+import Footer from '../components/Footer.jsx';
 import Services from '../components/ServicesQuality';
+import ProjectsList from '../components/ProjectsList';
+import ContactComponent from '../components/Contact';
+
 const { title = "Silvyu Dev" } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/faviconme.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -23,6 +27,9 @@ const { title = "Silvyu Dev" } = Astro.props;
 		<Hero client:load />
 		<Reviews client:load />
 		<Services client:load />
+		<ProjectsList customTitle={undefined} exceptProject={undefined} client:load />
+		<ContactComponent client:load/>
+		<Footer page="Home" client:load/>
 		<script is:inline>
 			if ("scrollRestoration" in history) {
 				history.scrollRestoration = "manual";

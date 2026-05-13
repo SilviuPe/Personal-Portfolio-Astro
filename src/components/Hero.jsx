@@ -26,16 +26,34 @@ export default function Hero() {
     return (
         <motion.div
             className="hero-section-container"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            initial={{
+                opacity: 0,
+                y: 80
+            }}
+            whileInView={{
+                opacity: 1,
+                y: 0
+            }}
+            transition={{
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1]
+            }}
+            viewport={{
+                once: false,
+            }}
         >
             <motion.div
             className="tag"
-            initial={{ opacity: 0, y: 80 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{
+                opacity: 0,
+                y: 80
+            }}
+            whileInView={{
+                opacity: 1,
+                y: 0
+            }}
             transition={{
-                duration: 1,
+                duration: 0.8,
                 ease: [0.22, 1, 0.36, 1]
             }}
             viewport={{
@@ -45,10 +63,16 @@ export default function Hero() {
             </motion.div>
             <motion.h1
                 className="title"
-                initial={{ opacity: 0, y: 80 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{
+                    opacity: 0,
+                    y: 80
+                }}
+                whileInView={{
+                    opacity: 1,
+                    y: 0
+                }}
                 transition={{
-                    duration: 1,
+                    duration: 0.8,
                     ease: [0.22, 1, 0.36, 1]
                 }}
                 viewport={{
@@ -60,12 +84,20 @@ export default function Hero() {
 
             <motion.p
                 className="description"
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{
+                    opacity: 0,
+                    y: 80
+                }}
+                whileInView={{
+                    opacity: 1,
+                    y: 0
+                }}
                 transition={{
-                    delay: 0.25,
                     duration: 0.8,
                     ease: [0.22, 1, 0.36, 1]
+                }}
+                viewport={{
+                    once: false,
                 }}
             >
                 Automations and web platforms that grow your business, not your workload
@@ -73,19 +105,27 @@ export default function Hero() {
 
             <motion.div
                 className="buttons-container"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{
+                    opacity: 0,
+                    y: 80
+                }}
+                whileInView={{
+                    opacity: 1,
+                    y: 0
+                }}
                 transition={{
-                    delay: 0.45,
                     duration: 0.8,
                     ease: [0.22, 1, 0.36, 1]
                 }}
+                viewport={{
+                    once: false,
+                }}
             >
-                <button className="cta-button">
+                <button className="cta-button" onClick={()=> {document.location.href = "/contact"}}>
                     Get in touch
                 </button>
 
-                <button className="portfolio">
+                <button className="portfolio" onClick={()=> {document.location.href = "/portfolio"}}>
                     View Portfolio
                 </button>
             </motion.div>
@@ -93,15 +133,18 @@ export default function Hero() {
             <motion.div
                 initial={{
                     opacity: 0,
-                    scale: 0.8
+                    y: 80
                 }}
-                animate={{
+                whileInView={{
                     opacity: 1,
-                    scale: 1
+                    y: 0
                 }}
                 transition={{
-                    delay: 0.6,
-                    duration: 1
+                    duration: 0.8,
+                    ease: [0.22, 1, 0.36, 1]
+                }}
+                viewport={{
+                    once: false,
                 }}
                 className="lottie-container"
             >
