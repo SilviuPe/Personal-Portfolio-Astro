@@ -101,7 +101,6 @@
     margin: 0;
 }
 
-
 @media (max-width: 1300px) {
     .developer-section-wrapper {
         flex-direction: column;
