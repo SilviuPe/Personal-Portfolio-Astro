@@ -33,7 +33,7 @@ export default function DeveloperSection() {
                 <motion.div {...AnimationSettings} className="developer-section-right-side">
                     <motion.div {...AnimationSettings} className="services-introduction">
                         <motion.h2 {...AnimationSettings}>Hey I'm Silviu.</motion.h2>
-                        <motion.p {...AnimationSettings}>I develop platforms and automations for businesses</motion.p>
+                        <motion.p {...AnimationSettings}>I build platforms, automations, and AI integrations that help businesses work faster and smarter.</motion.p>
                         <motion.div {...AnimationSettings} className="service-tag">
                             <p>Services I Offer</p>
                         </motion.div>
@@ -43,21 +43,21 @@ export default function DeveloperSection() {
                             <img src={AutomationIcon.src} width={24}/>
                             <motion.div {...AnimationSettings} className="service-description">
                                 <h3>Automations</h3>
-                                <p>Automations for your business</p>
+                                <p>Save time by automating repetitive tasks and workflows.</p>
                             </motion.div>
                         </motion.div>
                         <motion.div {...AnimationSettings} className="service-description-container">
                             <img src={WebIcon.src} width={24}/>
                             <motion.div {...AnimationSettings} className="service-description">
                                 <h3>Web Platforms</h3>
-                                <p>Web Interface for your best experience</p>
+                                <p>Custom web solutions built for performance and usability.</p>
                             </motion.div>
                         </motion.div>
                         <motion.div {...AnimationSettings} className="service-description-container">
                             <img src={ToolsIcon.src} width={24}/>
                             <motion.div {...AnimationSettings} className="service-description">
-                                <h3>AI & Online Tools integrations</h3>
-                                <p>Tools to maximize your time and profits</p>
+                                <h3>AI & Tool Integrations</h3>
+                                <p>Connect AI and online tools to optimize your business.</p>
                             </motion.div>
                         </motion.div>
                     </motion.div>

@@ -29,7 +29,7 @@ export default function Footer({page}) {
                     <motion.h2>Pages</motion.h2>
                     <ul>
                         <li className={page === "Home" ? "active" : ""}><a href={"/"}>Home</a></li>
-                        <li className={page === "Portfolio" ? "active" : ""}><a href={"/projects"}>Portfolio</a></li>
+                        <li className={page === "Portfolio" ? "active" : ""}><a href={"/portfolio"}>Portfolio</a></li>
                         <li className={page === "Contact" ? "active" : ""}><a href={"/contact"}>Contact</a></li>
                     </ul>
                 </motion.div>
